@@ -57,10 +57,8 @@ function renderRecipe(recipe) {
 
 		$(".title-recipe").text(val.title);
 		$(".author-recipe").text(val.source.name);*/
-		$(".list-recipes").append('<a class="item-recipe" href="#"><span class="attribution"><span class="title-recipe"> ' +  val.title + ' </span><span class="metadata-recipe"><span class="author-recipe"> ' + val.source.name + ' </span><span class="bookmarks-recipe"><span class="icon-bookmark"></span>  </span></span> </span><img src="img/recipes/320x350/' +val.name + '.jpg"/></a>')
+		$(".list-recipes").append('<a class="item-recipe" href="#"><span class="attribution"><span class="title-recipe"> ' +  val.title + ' </span><span class="metadata-recipe"><span class="author-recipe"> ' + val.source.name + ' </span><span class="bookmarks-recipe"><span class="icon-bookmark"></span>  </span></span> </span><img src="img/recipes/320x350/' +val.name + '.jpg"/></a>');
 		
-
-
 	});
 
 }
