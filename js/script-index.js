@@ -14,7 +14,9 @@ $(document).ready( function(){
 
 	}listaFavorito();
 
+
 	renderHighlightedRecipes(recipesArray);
+	renderActivities(activities);  
 
 });
 
@@ -70,6 +72,9 @@ function renderRecipe(recipe) {
 */
 function renderActivities(activitiesArray) {
 	console.log('Activities: ', activitiesArray);
+	activitiesArray.forEach(function(val){
+		renderActivity(val);
+	});
 }
 
 /*
@@ -78,7 +83,10 @@ function renderActivities(activitiesArray) {
 * archivo "templates/templates-activity.html"
 */
 function renderActivity(recipe) {
-	
+	var arr = jQuery.makeArray(recipe);
+	if(arr.length > 0){
+		$(".wrapper-message").hide();
+	}
 }
 
 
