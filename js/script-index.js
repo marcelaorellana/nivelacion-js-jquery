@@ -6,10 +6,17 @@ $(document).ready( function(){
 		$(".nuevasR").text("NUEVAS RECETAS");
 	}printNews();
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
+	
+
+	function listaFavorito(){
+
+		
+
+	}listaFavorito();
+
 	renderHighlightedRecipes(recipesArray);
 
 });
-
 
 /* 
 * Función que se encarga de pintar TODAS las recetas que tengan 
@@ -35,6 +42,25 @@ function renderHighlightedRecipes(recipesArray) {
 */
 function renderRecipe(recipe) {
 	console.log('Voy a pintar la receta: ', recipe);
+	var arr = jQuery.makeArray(recipe);
+	arr.forEach(function(val){	
+		/*$('<a>', {class: 'item-recipe', href: '#'}).appendTo(".list-recipes");
+		$("<span>",{class: 'attribution'}).appendTo('.item-recipe');
+		$("<span>",{class: 'title-recipe'}).appendTo('.attribution');
+		$("<span>",{class: 'metadata-recipe'}).appendTo('.attribution');
+		$("<span>",{class: 'author-recipe'}).appendTo('.metadata-recipe');
+		$("<span>",{class: 'bookmarks-recipe'}).appendTo('.metadata-recipe');
+		$("<span>",{class: 'bicon-bookmark'}).appendTo('.bookmarks-recipe');
+		$("<img>",{src: "img/recipes/640x480/" + val.name + ".jpg"}).appendTo('.item-recipe');
+
+		$(".title-recipe").text(val.title);
+		$(".author-recipe").text(val.source.name);*/
+		$(".list-recipes").append('<a class="item-recipe" href="#"><span class="attribution"><span class="title-recipe"> ' +  val.title + ' </span><span class="metadata-recipe"><span class="author-recipe"> ' + val.source.name + ' </span><span class="bookmarks-recipe"><span class="icon-bookmark"></span>  </span></span> </span><img src="img/recipes/640x480/' +val.name + '.jpg"/></a>')
+		
+
+
+	});
+
 }
 
 
