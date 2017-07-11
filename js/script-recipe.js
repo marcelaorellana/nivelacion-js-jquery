@@ -11,4 +11,5 @@ $(document).ready( function(){
 		$(this).addClass("active");
 		$(".js-show-make").removeClass("active");
 	});
+	$(".recipe .js-back").attr("href", "../index.html");
 });
