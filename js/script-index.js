@@ -1,6 +1,6 @@
 $(document).ready( function(){
 	$(".home .js-back").hide();
-	$(".recipe .js-menu").hide();
+	
 
 	function printNews(){
 		$(".nuevasR").text("NUEVAS RECETAS");
@@ -68,7 +68,7 @@ function renderActivities(activitiesArray) {
 		renderActivity(val);
 	});
 }
-
+  
 /*
 * Función que se encarga de pintar una actividad
 * Aqui se tiene que crear el HTML que esta en el 
