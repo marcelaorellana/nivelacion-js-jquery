@@ -7,13 +7,7 @@ $(document).ready( function(){
 	}printNews();
 	//La variable "recipesArray" esta declarada en el archivo "data/recipes.js"
 	
-
-	function listaFavorito(){
-
-		
-
-	}listaFavorito();
-
+	
 
 	renderHighlightedRecipes(recipesArray);
 	renderActivities(activities);  
@@ -84,6 +78,8 @@ function renderActivity(recipe) {
 	var arr = jQuery.makeArray(recipe);
 	if(arr.length > 0){
 		$(".wrapper-message").hide();
+
+		$(".list-activities").append('<a href="#" class="item-activity"><span class="attribution"><span class="avatar"><img src=" '+ recipe.userAvatar +' " class="image-avatar"></span><span class="meta"><span class="author">' + recipe.userName.split(' ')[0] + '</span> made <span class="recipe"> '+recipe.recipeName +' </span>: '+ recipe.text+' <span class="location">&mdash; '+ recipe.place +' </span></span></span><div class="bg-image" style="background-image: url('+ recipe.image +');"></div></a>');
 	}
 }
 
